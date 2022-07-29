@@ -24,7 +24,7 @@ class Post(File):
 
     def get_comments(self, id: int) -> list[dict]:
         all_comments: list[dict] = self.get_all_comments()
-        return [comment for comment in all_comments if comment['post_id'] == id ]
+        return [comment for comment in all_comments if comment['post_id'] == id]
 
     def search_posts_by_word(self, word: str) -> list[dict]:
         all_posts = self.get_all_posts()
